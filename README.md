@@ -8,5 +8,5 @@ test cases to validate the solution.
 
 ## Technologies Used
 
-- Java SDK: 21
+- Java SDK: 13
 - Test framework: (Specify if you've used any, like JUnit)
