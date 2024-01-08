@@ -10,7 +10,7 @@ public class FeatureDevelopment {
 
 	private int[] getAnswer(int[] progresses, int[] speeds) {
 		List<Integer> result = new ArrayList<>();
-		Queue<Integer> developmentQueue = fillDevelopmentQueue(progresses, speeds, developmentQueue);
+		Queue<Integer> developmentQueue = fillDevelopmentQueue(progresses, speeds, new LinkedList<>());
 
 		int count = 1;
 		int max = developmentQueue.poll();
