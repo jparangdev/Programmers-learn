@@ -17,7 +17,7 @@ public class CollectBracket {
 				stack.push(current);
 			} else if (current == ')' && !stack.isEmpty()) {
 				stack.pop();
-			} else if (current == ')' && stack.isEmpty()) {
+			} else if (current == ')') {
 				return false;
 			}
 		}
