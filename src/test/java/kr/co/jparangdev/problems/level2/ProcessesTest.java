@@ -31,6 +31,6 @@ class ProcessesTest {
 		Processes processes = new Processes();
 		int[] priorities1 = {1, 1, 1, 1, 1};
 		int location = 2;
-		assertEquals(2, processes.solution(priorities1, location));
+		assertEquals(3, processes.solution(priorities1, location));
 	}
 }

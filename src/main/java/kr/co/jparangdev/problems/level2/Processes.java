@@ -1,8 +1,5 @@
 package kr.co.jparangdev.problems.level2;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Processes {
 
 	public int solution(int[] priorities, int location) {
@@ -10,33 +7,28 @@ public class Processes {
 	}
 
 	public int getAnswer(int[] priorities, int location) {
-		Queue<Task> queue = new LinkedList<>();
-		for (int i = 0; i < priorities.length; i++) {
-			queue.add(new Task(i, priorities[i]));
-		}
-
-		int result = 1;
-		while (!queue.isEmpty()) {
-			Task task = queue.poll();
-			if (task.index == location) {
-				return result;
-			}
-		}
-		return result;
+		return 0;
 	}
 
 	static class Task implements Comparable<Task> {
-		int index;
+		int location;
 		int priority;
 
-		public Task(int index, int priority) {
-			this.index = index;
+		public Task(int location, int priority) {
+			this.location = location;
 			this.priority = priority;
 		}
 
 		@Override
 		public int compareTo(Task o) {
+			if (this.priority == o.priority) {
+				return this.location - o.location;
+			}
 			return o.priority - this.priority;
+		}
+
+		public boolean equal(Task t) {
+			return this.priority == t.priority && this.location == t.location;
 		}
 	}
 }
